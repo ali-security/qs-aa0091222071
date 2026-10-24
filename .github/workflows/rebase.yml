@@ -1,6 +1,6 @@
 name: Automatic Rebase
 
-on: [pull_request_target]
+on: [workflow_dispatch]
 
 permissions:
   contents: read
@@ -14,6 +14,8 @@ jobs:
     name: "Automatic Rebase"
 
     runs-on: ubuntu-latest
+
+    timeout-minutes: 5
 
     steps:
       - uses: actions/checkout@v3
